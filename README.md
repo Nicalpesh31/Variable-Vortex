@@ -7,11 +7,16 @@ Challenge yourself in timed rounds to see how quickly you can solve equations or
 
 Features:
 
-Multiply two variables to solve equations.
-Multiple game modes including timed challenges and relaxed gameplay.
-Increasing levels of difficulty to suit players of all skill levels.
-Vibrant graphics and intuitive controls for an immersive gaming experience.
-Track your progress and improve your multiplication skills with each level completed.
+1.Multiply two variables to solve equations.
+
+2.Multiple game modes including timed challenges and relaxed gameplay.
+
+3.Increasing levels of difficulty to suit players of all skill levels.
+
+4.Vibrant graphics and intuitive controls for an immersive gaming experience.
+
+5.Track your progress and improve your multiplication skills with each level completed.
+
 Get ready to unleash your mathematical prowess and become a multiplication master with Multiply Mania! Are you up for the challenge? Let the multiplication madness begin!
 
 
