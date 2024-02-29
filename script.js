@@ -58,10 +58,16 @@ function startCountdown(){
     action = setInterval(function(){
         timeremaining -= 1;
         document.getElementById("timeremainingvalue").innerHTML=timeremaining;
+
+        if(timeremaining == 10){
+            // Change the color to red
+            document.getElementById("timeremaining").style.color = "red";
+        }
+
         if(timeremaining == 0){
             stopCountdown();
             show('gameOver');
-            document.getElementById("gameOver").innerHTML="<p>Game Over!</p> <p>Your score is:"+score+ "</p>"
+            document.getElementById("gameOver").innerHTML="<p>Game Over! </br> Your score is:"+score+ "</p>"
             hide("timeremaining");
             hide("correct");
             hide("wrong");

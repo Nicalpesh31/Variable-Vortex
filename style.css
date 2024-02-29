@@ -1,5 +1,6 @@
+
 html {
-    height: 100%;
+    height: 600px;
     background-color: rgb(85, 149, 149);
 }
 
@@ -7,37 +8,42 @@ body {
     display: grid;
     place-content: center;
     gap: 0.5em;
-
+    justify-content: center;
+    align-items: center;
     text-align: center;
     line-height: 1.42;
+    font-size: 16px;
 }
 
 #container {
-    height: 500px;
-    width: 650px;
+    max-width: 90%;
+    height: fit-content;
     background-color: rgb(179, 164, 148);
-    margin: 100px auto;
-    border-radius: 10px 0 10px 10px;
+    margin: 80px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
     position: relative;
+    padding: 20px;
 }
 
 #score {
-    margin: -38px 0;
-    border-radius: 10px 10px 0;
+    margin: -38px auto 0;
+    border-radius: 10px;
+    background-size: auto;
     background-color: rgb(179, 164, 148);
-    float: right;
     color: #050505;
     text-align: center;
     font-size: larger;
-    padding: 10px;
-    width: 80px;
-    left: 500px;
+    padding: 8px;
+    width: fit-content;
+
 }
 
-#correct {
+#correct,
+#wrong {
     position: absolute;
-    left: 477px;
-    top: 153px;
+    top: 0;
     background-color: rgb(54, 146, 58);
     color: aliceblue;
     padding: 12px;
@@ -45,111 +51,81 @@ body {
     display: none;
 }
 
-#wrong {
-    position: absolute;
-
-    left: 465px;
-    top: 153px;
-    background-color: rgb(169, 33, 18);
-    color: aliceblue;
-    padding: 12px;
-    border-radius: 11px;
-    display: none;
-
-}
-
 #question {
-    width: 450px;
-    height: 150px;
-    margin: 50px auto 10px auto;
+    max-width: 100%;
+    margin: 10px auto auto;
     border-radius: 10px;
     background-color: rgb(158, 87, 87);
     font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    font-size: 100px;
+    font-size: 5.5vw;
     color: black;
-
-
 }
 
 #instruction {
-    width: 243px;
-    height: 50px;
+    max-width: 100%;
+    height: auto;
     background-color: rgb(156, 192, 26);
     border-radius: 11px;
     color: aliceblue;
-    margin: auto;
+    margin: 20px auto;
+    padding: 10px;
     text-align: center;
-    line-height: 45px;
-    display: flexbox;
-
 }
 
 #choices {
     display: flex;
-    width: 450px;
-    height: 100px;
-    margin: 5px auto;
-
-
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .box {
-    width: 95px;
+    width: 150px;
     height: 85px;
     background-color: rgb(37, 143, 127);
-    float: left;
     margin: 10px;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
     line-height: 80px;
-    font-size: x-large;
-    position: relative;
+    font-size: 2.5vw;
     transition: all 0.2s;
-
 }
 
 .box:active,
 #startreset:active {
     background-color: #475569;
     color: rgb(255, 255, 255);
-
 }
 
 #startreset {
-    width: 90px;
+    width: 150px;
     padding: 15px;
     background-color: rgb(37, 127, 165);
     color: white;
-    margin: 0px auto;
+    margin: 20px auto;
     border-radius: 5px;
     cursor: pointer;
     text-align: center;
-    position: relative;
     transition: all 0.2s;
 }
 
 #timeremaining {
-    width: 152px;
-    padding: 12px;
-    position: absolute;
-    top: 450px;
-    left: 470px;
+    margin: -74px -2px;
+    padding: 15px;
+    float: right;
     background-color: rgb(225, 225, 135);
     border-radius: 10px;
     display: none;
+
 }
 
 #gameOver {
-    animation: alternate-reverse;
     align-items: center;
     text-align: center;
-    top: -350px;
+    top: -250px;
     left: 177px;
-    height: 200px;
+    height: 140px;
     width: 300px;
-    position: relative;
     border-radius: 10px;
     background-color: rgb(19, 101, 110);
     color: white;
@@ -157,5 +133,82 @@ body {
     display: none;
 }
 
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    #container {
+        height: 400px;
+        padding: 10vmin;
+        justify-content: center;
+    }
+
+    #score {
+        top: -10px;
+        background-color: #475569;
+        width: fit-content;
+    }
+
+    #question {
+        font-size: 5vw;
+    }
+
+    #choices {
+        display: flex;
+        flex-wrap: wrap;
+        /* Allow flex items to wrap to the next line */
+        justify-content: center;
+        /* Center the flex items horizontally */
+    }
+
+    .box {
+        width: calc(50% - 20px);
+        /* Set width to half of the container minus margins */
+        height: 85px;
+        margin: 10px;
+        /* Add margin between the boxes */
+        font-size: 3vw;
+        /* Adjust font size */
+    }
+
+    #startreset {
+        width: 80%;
+    }
+
+    #gameOver {
+        position: absolute;
+        margin-top: -250px;
+        height: fit-content;
+        padding: auto;
+        left: 10px;
+        width: 90%;
+        font-size: 3vw;
+    }
+
+    #timeremaining {
+        margin: -554px -2px;
+        padding: 15px;
+        background-color: rgb(225, 225, 135);
+        border-radius: 10px;
+        display: none;
+    }
 
 
+}
+
+@media only screen and (max-width: 480px) {
+
+    #correct,
+    #wrong {
+        margin: 5px 0 90% -40px;
+    }
+
+    #question {
+        font-size: 10vw;
+    }
+
+    #timeremaining {
+        margin: -544px -2px;
+        /* Further adjust top position for even smaller screens */
+        font-size: 10px;
+        /* Further adjust font size for even smaller screens */
+    }
+}
