@@ -146,9 +146,8 @@ body {
     }
 
     #container {
-        height: 400px;
-        padding: 10vmin;
-        justify-content: center;
+        position: relative; /* Ensure the container is positioned relative */
+        padding: 10px;
     }
 
     #correct,
@@ -167,7 +166,127 @@ body {
     }
 
     #choices {
-        display: flex;
+        display: flex;/* Resetting default margin and padding */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Setting a background color for the entire page */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+        
+        /* Centering the container */
+        #container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        /* Styling the score */
+        #score {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        
+        /* Styling the correct and wrong messages */
+        #correct,
+        #wrong {
+            display: none; /* Initially hidden */
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        #correct {
+            color: green;
+        }
+        
+        #wrong {
+            color: red;
+        }
+        
+        /* Styling the question */
+        #question {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+        
+        /* Styling the instruction */
+        #instruction {
+            margin-bottom: 20px;
+        }
+        
+        /* Styling the choices */
+        #choices {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .box {
+            width: 100px;
+            height: 60px;
+            background-color: #009688;
+            margin: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        /* Styling the start/reset button */
+        #startreset {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+        
+        /* Styling the timeremaining section */
+        #timeremaining {
+            display: none; /* Initially hidden */
+            font-size: 1.2em;
+        }
+        
+        /* Styling the game over message */
+        #gameOver {
+            display: none; /* Initially hidden */
+            font-size: 1.5em;
+            margin-top: 20px;
+        }
+        
+        /* Media queries for responsiveness */
+        @media only screen and (max-width: 768px) {
+            /* Adjusting font sizes for smaller screens */
+            #score,
+            #question,
+            .box {
+                font-size: 1em;
+            }
+        }
+        
+        @media only screen and (max-width: 480px) {
+            /* Adjusting font sizes for even smaller screens */
+            #score,
+            #question,
+            .box {
+                font-size: 0.8em;
+            }
+        }
+        
         flex-wrap: wrap;
         /* Allow flex items to wrap to the next line */
         justify-content: center;
@@ -199,13 +318,13 @@ body {
     }
 
     #timeremaining {
-        position: relative;
-
-        padding: 15px;
-        background-color: rgb(225, 225, 135);
-        border-radius: 10px;
-        display: none;
-    }
+    position: absolute;
+    align-items: center;
+    top: 0;
+    right: 0;
+    padding: 10px;
+    font-size: 16px;
+}
 
 
 }
@@ -242,9 +361,10 @@ body {
     }
 
     #timeremaining {
-        position: absolute;
-        top: -200px;
-        margin: 5px;
+        
+        align-items: center;
+        top: 10px;
+        margin: 0px;
     }
 }
 
@@ -280,10 +400,9 @@ body {
 
     #timeremaining {
         position: absolute;
-        float: right;
         top: -80px; /* Adjust position to be on top of container */
         /* Adjust position to be on top of container */
-        margin: 2px;
+        margin: 0px;
         font-size: 10px; /* Adjust font size for smaller screens */
     }
 }
