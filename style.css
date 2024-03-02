@@ -110,6 +110,7 @@ body {
 }
 
 #timeremaining {
+    position: absolute;
     margin: -74px -2px;
     padding: 15px;
     float: right;
@@ -149,6 +150,10 @@ body {
         height: 400px;
         padding: 10vmin;
         justify-content: center;
+    }
+    #correct,
+    #wrong {
+        display: none;
     }
 
     #score {
@@ -211,9 +216,10 @@ body {
         margin: 10px;
     }
     #correct,
-    #wrong {
-       margin-right: 60px;
-    }
+#wrong {
+    padding: 1ch;
+    display: none;
+}
 
     #question {
         font-size: 10vw;
