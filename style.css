@@ -131,6 +131,10 @@ body {
 
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
+    body{
+
+        align-items: center;
+    }
     #correct,
     #wrong {
         display: flex;
@@ -138,6 +142,7 @@ body {
     }
 
     #container {
+        margin: 80px 10px;
         position: relative;
         padding: 10px;
     }
@@ -182,6 +187,9 @@ body {
 }
 
 @media only screen and (max-width: 480px) {
+    body{
+        margin: 2px;
+    }
     #correct,
     #wrong {
         padding: 1ch;
@@ -204,7 +212,7 @@ body {
     #timeremaining {
         display: none; /* Initially hidden */
         font-size: 1.2em;
-        background-color: #90caf9; /* Background color for timeremaining */
+        background-color: #45365043; /* Background color for timeremaining */
         padding: 10px;
         width: 90%;
         border-radius: 5px;
