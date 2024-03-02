@@ -43,7 +43,7 @@ body {
 #correct,
 #wrong {
     position: absolute;
-    top: 0;
+    top: 0px;
     background-color: rgb(54, 146, 58);
     color: aliceblue;
     padding: 12px;
@@ -135,6 +135,16 @@ body {
 
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
+    body{
+        margin: 0%;
+        
+    }
+    #correct,
+    #wrong {
+        display: flex;
+      left: 0%;
+    }
+
     #container {
         height: 400px;
         padding: 10vmin;
@@ -196,9 +206,14 @@ body {
 
 @media only screen and (max-width: 480px) {
 
+    body{
+        padding: 0%;
+        margin: 10px;
+    }
     #correct,
     #wrong {
-        margin: 5px 0 90% -40px;
+        display: flex;
+       margin-right: 60px;
     }
 
     #question {
