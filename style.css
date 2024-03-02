@@ -29,8 +29,7 @@ body {
     margin: 0;
 }
 #container {
-    max-width: 90%;
-    height: fit-content;
+    max-width: 100%;
     background-color: rgb(179, 164, 148);
     z-index: 1;
     align-items: center;
@@ -243,7 +242,7 @@ body {
     #timeremaining {
         display: none; /* Initially hidden */
         font-size: 1.2em;
-        background-color: #45365043; /* Background color for timeremaining */
+        background-color: #45365060; /* Background color for timeremaining */
         padding: 10px;
         width: 80%;
         border-radius: 5px;
