@@ -212,8 +212,6 @@ body {
     }
     #correct,
     #wrong {
-        display: flex;
-    
        margin-right: 60px;
     }
 
