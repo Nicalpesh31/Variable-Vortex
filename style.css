@@ -1,5 +1,5 @@
 html {
-    height: 600px;
+    height: 100%;
     background-color: rgb(85, 149, 149);
 }
 
@@ -12,6 +12,7 @@ body {
     text-align: center;
     line-height: 1.42;
     font-size: 16px;
+    margin: 0;
 }
 
 #container {
@@ -29,20 +30,18 @@ body {
 #score {
     margin: -38px auto 0;
     border-radius: 10px;
-    background-size: auto;
     background-color: rgb(179, 164, 148);
     color: #050505;
     text-align: center;
     font-size: larger;
     padding: 8px;
     width: fit-content;
-
 }
 
 #correct,
 #wrong {
     position: absolute;
-    top: 0px;
+    top: 0;
     background-color: rgb(54, 146, 58);
     color: aliceblue;
     padding: 12px;
@@ -109,13 +108,11 @@ body {
 }
 
 #timeremaining {
-    margin: -74px -2px;
     padding: 15px;
-    float: right;
     background-color: rgb(225, 225, 135);
     border-radius: 10px;
     display: none;
-
+    font-size: 1.2em;
 }
 
 #gameOver {
@@ -134,11 +131,6 @@ body {
 
 /* Media queries for responsiveness */
 @media only screen and (max-width: 768px) {
-    body {
-        margin: 0%;
-
-    }
-
     #correct,
     #wrong {
         display: flex;
@@ -146,7 +138,7 @@ body {
     }
 
     #container {
-        position: relative; /* Ensure the container is positioned relative */
+        position: relative;
         padding: 10px;
     }
 
@@ -166,141 +158,14 @@ body {
     }
 
     #choices {
-        display: flex;/* Resetting default margin and padding */
-html,
-body {
-    margin: 0;
-    padding: 0;
-}
-
-/* Setting a background color for the entire page */
-body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-}
-
-/* Centering the container */
-#container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding: 20px;
-}
-
-/* Styling the score */
-#score {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-/* Styling the correct and wrong messages */
-#correct,
-#wrong {
-    display: none; /* Initially hidden */
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-#correct {
-    color: green;
-}
-
-#wrong {
-    color: red;
-}
-
-/* Styling the question */
-#question {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-}
-
-/* Styling the instruction */
-#instruction {
-    margin-bottom: 20px;
-}
-
-/* Styling the choices */
-#choices {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.box {
-    width: 100px;
-    height: 60px;
-    background-color: #009688;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 1.2em;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-/* Styling the start/reset button */
-#startreset {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-/* Styling the timeremaining section */
-#timeremaining {
-    display: none; /* Initially hidden */
-    font-size: 1.2em;
-}
-
-/* Styling the game over message */
-#gameOver {
-    display: none; /* Initially hidden */
-    font-size: 1.5em;
-    margin-top: 20px;
-}
-
-/* Media queries for responsiveness */
-@media only screen and (max-width: 768px) {
-    /* Adjusting font sizes for smaller screens */
-    #score,
-    #question,
-    .box {
-        font-size: 1em;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    /* Adjusting font sizes for even smaller screens */
-    #score,
-    #question,
-    .box {
-        font-size: 0.8em;
-    }
-}
-
-        flex-wrap: wrap;
-        /* Allow flex items to wrap to the next line */
-        justify-content: center;
-        /* Center the flex items horizontally */
+        display: flex;
+        text-align: center;
     }
 
     .box {
-        width: calc(50% - 20px);
-        /* Set width to half of the container minus margins */
-        height: 85px;
-        margin: 10px;
-        /* Add margin between the boxes */
-        font-size: 3vw;
-        /* Adjust font size */
+        width: 100px;
+        height: 60px;
+        font-size: 1.2em;
     }
 
     #startreset {
@@ -308,39 +173,15 @@ body {
     }
 
     #gameOver {
-        position: absolute;
-        margin-top: -250px;
         height: fit-content;
-        padding: auto;
-        left: 10px;
         width: 90%;
         font-size: 3vw;
+        align-items: center;
+
     }
-
-    #timeremaining {
-    position: absolute;
-    align-items: center;
-    top: 0;
-    right: 0;
-    padding: 10px;
-    font-size: 16px;
-}
-
-
 }
 
 @media only screen and (max-width: 480px) {
-
-    body {
-        padding: 0%;
-        margin: 10px;
-    }
-
-    #container {
-        position: relative;
-        padding: 10px;
-    }
-
     #correct,
     #wrong {
         padding: 1ch;
@@ -361,49 +202,45 @@ body {
     }
 
     #timeremaining {
-        
-        align-items: center;
-        top: -40px;
-        right: -90px;
-        margin: 0px;
+        display: none; /* Initially hidden */
+        font-size: 1.2em;
+        background-color: #90caf9; /* Background color for timeremaining */
+        padding: 10px;
+        width: 90%;
+        border-radius: 5px;
+        position: absolute;
+        top: -90px; /* Adjust this value to fine-tune the positioning */
+        left: 50%;
+        justify-content: space-between;
+        transform: translateX(-50%);
+        z-index: 1; /* Ensure it's above other content */
+    }
+    #gameOver{
+        /* align-items: center; */
+        /* justify-content: center; */
+        /* background-color: red; */
+        transform: translateX(6%);
     }
 }
 
 @media only screen and (max-width: 240px) {
-    body {
-        padding: 0%;
-        margin: 10px;
-    }
-
-    #container {
-        position: relative;
-        padding: 10px;
-    }
-
-    #correct,
-    #wrong {
-        padding: 1ch;
-        display: none;
-    }
-
     #question {
-        font-size: 8vw; /* Adjust font size for smaller screens */
+        font-size: 8vw;
     }
 
     #score {
-        padding: 0px 5px; /* Adjust padding for smaller screens */
+        padding: 0px 5px;
     }
 
     #startreset {
-        width: 120px; /* Adjust width for smaller screens */
-        padding: 8px; /* Adjust padding for smaller screens */
+        width: 120px;
+        padding: 8px;
     }
 
     #timeremaining {
         position: absolute;
-        top: -80px; /* Adjust position to be on top of container */
-        /* Adjust position to be on top of container */
+        top: -80px;
         margin: 0px;
-        font-size: 10px; /* Adjust font size for smaller screens */
+        font-size: 1.2em;
     }
 }
