@@ -122,9 +122,9 @@ body {
 #gameOver {
     align-items: center;
     text-align: center;
-    top: -250px;
+    top: -200px;
     left: 177px;
-    height: 140px;
+    height: 120px;
     width: 300px;
     border-radius: 10px;
     background-color: rgb(19, 101, 110);
@@ -169,7 +169,7 @@ body {
         /* Adjust font size */
     }
 
-    #startreset {
+    #startreset  {
         width: 80%;
     }
 
@@ -204,9 +204,17 @@ body {
     #question {
         font-size: 10vw;
     }
+    #score{
+        padding: 0px  10px;
+    }
+    #startreset {
+        width: 150px;
+        padding: 12px;
+    }
 
     #timeremaining {
-        margin: -544px -2px;
+        margin: -510px -38px;
+        padding: 10px;
         /* Further adjust top position for even smaller screens */
         font-size: 10px;
         /* Further adjust font size for even smaller screens */
