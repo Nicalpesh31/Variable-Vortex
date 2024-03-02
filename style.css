@@ -229,6 +229,8 @@ body {
     }
 
     #timeremaining {
+        right: 0%;
+        top: -9px;
         margin: -520px -38px;
         padding: 10px;
         /* Further adjust top position for even smaller screens */
