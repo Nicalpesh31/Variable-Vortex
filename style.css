@@ -213,6 +213,7 @@ body {
     #correct,
     #wrong {
         display: flex;
+    
        margin-right: 60px;
     }
 
@@ -228,7 +229,7 @@ body {
     }
 
     #timeremaining {
-        margin: -510px -38px;
+        margin: -520px -38px;
         padding: 10px;
         /* Further adjust top position for even smaller screens */
         font-size: 10px;
