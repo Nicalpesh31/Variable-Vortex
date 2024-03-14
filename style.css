@@ -242,9 +242,10 @@ body {
     #timeremaining {
         display: none; /* Initially hidden */
         font-size: 1.2em;
-        background-color: #45365060; /* Background color for timeremaining */
+        background-color: #00000060; /* Background color for timeremaining */
         padding: 10px;
         width: 80%;
+        color: white;
         border-radius: 5px;
         position: absolute;
         top: -90px; /* Adjust this value to fine-tune the positioning */
